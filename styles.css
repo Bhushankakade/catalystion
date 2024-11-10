@@ -121,7 +121,9 @@ ul.list li a:hover {
   height: 380px;
 }
 
-.tagline__content {
+/* hero section */
+
+/* .tagline__content {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -134,6 +136,64 @@ ul.list li a:hover {
   width: 500px;
   position: relative;
   right: 14rem;
+} */
+
+/* Hero Section Styling */
+.hero__section {
+  background-color: #f8f9fa; /* Light gray for a professional look */
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tagline__content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* Image Styling */
+.catalyst_working {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+/* Tagline Info Styling */
+.tagline__info {
+  max-width: 500px;
+  color: #343a40; /* Dark gray for text */
+}
+
+.tagline__info h2 {
+  font-size: 2rem;
+  color: #2d6a4f; /* Professional green */
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.tagline__info p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #495057; /* Medium gray */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tagline__content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tagline__info {
+    max-width: 100%;
+  }
 }
 
 /* consultant work */
