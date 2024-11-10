@@ -12,7 +12,7 @@ counters.forEach((counter) => {
       counter.innerText = Math.ceil(count + increment);
       setTimeout(updateCount, 20);
     } else {
-      counter.innerText = target;
+      counter.innerText = `${target}`;
     }
   };
 
@@ -94,3 +94,55 @@ const featureObserver = new IntersectionObserver(animateFeatures, {
 
 // Observe each feature item
 featureItems.forEach((item) => featureObserver.observe(item));
+
+let currentIndex = 0;
+const testimonialsContainer = document.querySelector(".testimonial-container");
+const testimonialCards = document.querySelectorAll(".testimonial-card");
+const totalTestimonials = testimonialCards.length;
+
+function updateTestimonials() {
+  const offset = -(currentIndex * (testimonialCards[0].offsetWidth + 20)); // Adjust for margin between cards
+  testimonialsContainer.style.transform = `translateX(${offset}px)`;
+}
+
+document.querySelector(".prev-btn").addEventListener("click", () => {
+  currentIndex = currentIndex === 0 ? totalTestimonials - 1 : currentIndex - 1;
+  updateTestimonials();
+});
+
+document.querySelector(".next-btn").addEventListener("click", () => {
+  currentIndex = currentIndex === totalTestimonials - 1 ? 0 : currentIndex + 1;
+  updateTestimonials();
+});
+
+// Initialize the testimonials view
+updateTestimonials();
+
+// Trigger the button animation when it comes into view
+const joinBtn = document.querySelector(".join-btn");
+
+window.addEventListener("scroll", () => {
+  if (joinBtn.getBoundingClientRect().top <= window.innerHeight) {
+    joinBtn.classList.add("animate-btn");
+  }
+});
+
+// footer
+// Trigger fadeIn animation when footer comes into view
+// back to top
+// Get the button element
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// Function to show the button when user scrolls down 200 pixels
+window.addEventListener("scroll", () => {
+  if (document.documentElement.scrollTop > 1300) {
+    scrollToTopBtn.classList.add("show");
+  } else {
+    scrollToTopBtn.classList.remove("show");
+  }
+});
+
+// Function to scroll back to the top when the button is clicked
+scrollToTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
