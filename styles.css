@@ -9,7 +9,6 @@ body {
 }
 
 /* navbar */
-/* Navbar styling */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -23,7 +22,6 @@ body {
   top: 0;
   z-index: 1;
 }
-/* Logo Styling */
 .logo {
   font-family: "Poppins", sans-serif;
   cursor: pointer;
@@ -31,7 +29,7 @@ body {
 
 #catalyst {
   color: #1f3a93;
-  font-size: 1.8rem; /* Adjusted for a slightly larger logo */
+  font-size: 1.8rem;
 }
 
 #catalyst span {
@@ -39,14 +37,14 @@ body {
   font-weight: 400;
 }
 
-/* Navigation links styling */
 .list {
   display: flex;
   list-style: none;
-  gap: 2.5rem; /* Reduced gap for better spacing */
+  gap: 2.5rem;
   font-size: 1.3rem;
-  font-weight: 500; /* Made the font slightly bolder for better visibility */
-  margin-left: auto; /* Ensure the links are aligned to the right */
+  font-weight: 500;
+  margin-left: auto;
+  position: relative;
 }
 
 ul.list li a {
@@ -64,15 +62,14 @@ ul.list li a:hover {
   color: #32cd32;
 }
 
-/* Button styling */
 .login__button {
   border: 0;
   background: #2dbe60;
   color: #fff;
   font-size: 1.2rem;
-  padding: 8px 16px; /* Increased padding for a more balanced look */
+  padding: 8px 16px;
   border-radius: 8px;
-  margin-right: 1.5rem; /* Increased margin for better separation */
+  margin-right: 1.5rem;
   border: 1px solid #2dbe60;
   transition: 200ms;
   cursor: pointer;
@@ -86,15 +83,14 @@ ul.list li a:hover {
 
 .user {
   margin-right: 7px;
-  font-size: 1.2rem; /* Slightly adjusted size for better visibility */
+  font-size: 1.2rem;
 }
 
-/* Apply to Catalyst button */
 .apply_to_catalyst {
   border: 1px solid #2dbe60;
   background-color: #fff;
   font-size: 1.2rem;
-  padding: 8px 16px; /* Adjusted padding for consistency */
+  padding: 8px 16px;
   color: #333;
   border-radius: 8px;
   cursor: pointer;
@@ -106,13 +102,12 @@ ul.list li a:hover {
   color: #fff;
 }
 
-/* Explore section styling */
 .explore {
   width: 100%;
   height: 5vh;
   background-color: #2dbe6029;
   text-align: center;
-  margin-top: 1rem; /* Increased margin for better spacing */
+  margin-top: 1rem;
 }
 
 .explore__button {
@@ -125,33 +120,132 @@ ul.list li a:hover {
   top: 5px;
 }
 
-/* Catalyst Working section (image or content) */
 .catalyst__working {
   width: 630px;
   height: 380px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+.menu-icon {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .list li {
+    font-size: 1.2rem;
+  }
+
+  .login__button {
+    padding: 9px 10px;
+    font-size: 1.1rem;
+  }
+
+  .login__button i {
+    font-size: 1rem;
+    align-items: center;
+  }
+
+  .apply_to_catalyst {
+    padding: 9px 10px;
+  }
+}
+
+@media (max-width: 1013px) {
   .navbar {
-    flex-direction: column; /* Stack navbar items for small screens */
+    justify-content: space-evenly;
+  }
+  .list {
+    position: absolute;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    top: 100px;
+    right: 0px;
+    width: 200px;
+    text-align: center;
     padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%); /* Ensure it's fully off-screen */
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+    overflow: hidden;
+  }
+
+  .menu-icon {
+    display: block;
+    font-size: 3rem;
+    cursor: pointer;
+  }
+  .list.open {
+    transform: translateX(0); /* Slide in the menu */
+  }
+}
+
+@media (max-width: 645px) {
+  .login__button {
+    padding: 10px 7px;
+    font-size: 1.2rem;
+  }
+
+  .login__button i {
+    font-size: 1rem;
+  }
+
+  .apply_to_catalyst {
+    font-size: 1rem;
+    padding: 10px 7px;
+  }
+
+  .menu-icon {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 572px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login__button {
+    padding: 10px 12px;
+  }
+
+  .apply_to_catalyst {
+    padding: 10px 12px;
+  }
+
+  .menu-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
   }
 
   .list {
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-left: 0;
-  }
-
-  .buttons {
-    margin-top: 1.5rem;
+    top: 80px;
   }
 }
+
+@media (max-width: 474px) {
+  .menu-icon {
+    font-size: 2rem;
+    position: absolute;
+    top: 15px;
+    right: 2rem;
+  }
+
+  .list {
+    position: absolute;
+    top: 80px;
+  }
+}
+
 /* hero section */
 
 .hero__section {
-  background-color: #f8f9fa; /* Light gray for a professional look */
+  background-color: #f8f9fa;
   padding: 4rem 2rem;
   display: flex;
   justify-content: center;
@@ -167,7 +261,6 @@ ul.list li a:hover {
   flex-wrap: wrap;
 }
 
-/* Image Styling */
 .catalyst_working {
   width: 100%;
   max-width: 600px;
@@ -176,15 +269,14 @@ ul.list li a:hover {
   object-fit: cover;
 }
 
-/* Tagline Info Styling */
 .tagline__info {
   max-width: 500px;
-  color: #343a40; /* Dark gray for text */
+  color: #343a40;
 }
 
 .tagline__info h2 {
   font-size: 2rem;
-  color: #2d6a4f; /* Professional green */
+  color: #2d6a4f;
   margin-bottom: 1rem;
   font-weight: 700;
 }
@@ -192,10 +284,9 @@ ul.list li a:hover {
 .tagline__info p {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #495057; /* Medium gray */
+  color: #495057;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .tagline__content {
     flex-direction: column;
@@ -482,7 +573,7 @@ ul.list li a:hover {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
   opacity: 0;
-  transform: translateY(20px); /* Initial state for animation */
+  transform: translateY(20px);
 }
 
 .step-item:hover {
@@ -507,35 +598,32 @@ ul.list li a:hover {
   font-size: 1em;
 }
 
-/* Animated State */
 .step-item.animate {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* coming soons  */
-/* General Section Styling */
+/* coming soons */
 .coming-soon-section {
-  background-color: #f8f9fa; /* Light gray for professionalism */
-  color: #333; /* Dark gray for readability */
+  background-color: #f8f9fa;
+  color: #333;
   padding: 60px 20px;
   text-align: center;
 }
 
 .coming-soon-section h2 {
   font-size: 2.5em;
-  color: #2d6a4f; /* Deep green for a professional accent */
+  color: #2d6a4f;
   margin-bottom: 10px;
 }
 
 .coming-soon-section .section-description {
   font-size: 1.2em;
-  color: #495057; /* Medium gray */
+  color: #495057;
   margin-bottom: 40px;
 }
 
-/* Feature Path Styling */
 .features-path {
   display: flex;
   flex-wrap: wrap;
@@ -544,7 +632,7 @@ ul.list li a:hover {
   position: relative;
   padding-top: 30px;
   padding-bottom: 30px;
-  background: #e9ecef; /* Light gray background for subtle contrast */
+  background: #e9ecef;
   border-radius: 20px;
 }
 
@@ -557,7 +645,7 @@ ul.list li a:hover {
   transition: transform 0.3s, box-shadow 0.3s;
   opacity: 0;
   transform: translateY(30px);
-  border: 1px solid #adb5bd; /* Light border for a polished look */
+  border: 1px solid #adb5bd;
 }
 
 .feature-item:hover {
@@ -567,29 +655,29 @@ ul.list li a:hover {
 
 .feature-icon {
   font-size: 2.5em;
-  color: #2d6a4f; /* Consistent green color for icons */
+  color: #2d6a4f;
   margin-bottom: 15px;
 }
 
 .feature-item h3 {
   font-size: 1.3em;
-  color: #2d6a4f; /* Match with icon color */
+  color: #2d6a4f;
   margin-bottom: 10px;
 }
 
 .feature-item p {
   font-size: 1em;
-  color: #495057; /* Darker gray for readability */
+  color: #495057;
 }
 
-/* Animated State */
 .feature-item.animate {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* testimonial */
+/* testimonials */
+
 .testimonials {
   position: relative;
   width: 100%;
@@ -659,16 +747,14 @@ ul.list li a:hover {
 }
 
 /* segment */
-/* Section Title Styling */
 .section-title {
   font-size: 2rem;
   font-weight: 600;
   text-align: center;
   margin-bottom: 2rem;
-  color: #4caf50; /* Green for professionalism */
+  color: #4caf50;
 }
 
-/* Segment Container Styling */
 .segments {
   background-color: #f7f7f7;
   padding: 3rem 2rem;
@@ -677,7 +763,6 @@ ul.list li a:hover {
   margin: 0 5%;
 }
 
-/* Container for Segment Cards */
 .segments-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -685,7 +770,6 @@ ul.list li a:hover {
   animation: fadeInUp 1s ease-in-out;
 }
 
-/* Styling for Each Segment Card */
 .segment-card {
   background-color: #fff;
   padding: 1.5rem;
@@ -697,22 +781,20 @@ ul.list li a:hover {
 
 .segment-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Slight shadow on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Icon Styling */
 .icon {
   font-size: 3rem;
-  color: #4caf50; /* Consistent green color */
+  color: #4caf50;
   margin-bottom: 1rem;
   transition: color 0.3s ease;
 }
 
 .segment-card:hover .icon {
-  color: #00796b; /* Slightly darker shade of green for hover effect */
+  color: #00796b;
 }
 
-/* Segment Title Styling */
 .segment-title {
   font-size: 1.2rem;
   font-weight: 500;
@@ -720,7 +802,6 @@ ul.list li a:hover {
   margin-top: 1rem;
 }
 
-/* Animation for Fade-In Effect */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -732,14 +813,12 @@ ul.list li a:hover {
   }
 }
 
-/* join community */
-/* Section Styling */
 .join-community {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #2dbe60; /* Bold blue background */
+  background: #2dbe60;
   color: #fff;
   padding: 60px 20px;
   text-align: center;
@@ -761,7 +840,8 @@ ul.list li a:hover {
   }
 }
 
-/* Title and Subtitle Styling */
+/* join community */
+
 .join-title {
   font-size: 2.5rem;
   font-weight: bold;
@@ -784,9 +864,8 @@ ul.list li a:hover {
   opacity: 0.8;
 }
 
-/* Join Button */
 .join-btn {
-  background-color: #1f3a93; /* Bright and energetic color */
+  background-color: #1f3a93;
   border: none;
   color: #fff;
   padding: 15px 30px;
@@ -801,16 +880,15 @@ ul.list li a:hover {
 }
 
 .join-btn:hover {
-  background-color: #ff4500; /* Darker shade on hover */
+  background-color: #ff4500;
   transform: translateY(-5px);
 }
 
 .join-btn i {
   margin-right: 10px;
-  font-size: 1.6rem; /* Icon size */
+  font-size: 1.6rem;
 }
 
-/* Button Animation */
 @keyframes slideIn {
   0% {
     transform: translateX(50px);
@@ -822,7 +900,6 @@ ul.list li a:hover {
   }
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 768px) {
   .join-community {
     padding: 40px 20px;
@@ -866,9 +943,8 @@ ul.list li a:hover {
 }
 
 /* footer */
-/* Footer Styling */
 .footer {
-  background-color: #333; /* Dark background for contrast */
+  background-color: #333;
   color: #fff;
   padding: 50px 20px;
   font-family: "Arial", sans-serif;
@@ -889,7 +965,6 @@ ul.list li a:hover {
   }
 }
 
-/* Footer Content Layout */
 .footer-content {
   display: flex;
   justify-content: space-between;
@@ -898,7 +973,6 @@ ul.list li a:hover {
   margin: 0 auto;
 }
 
-/* Footer Logo */
 .footer-logo {
   flex: 1;
   min-width: 250px;
@@ -917,7 +991,6 @@ ul.list li a:hover {
   color: #bbb;
 }
 
-/* Quick Links */
 .footer-links,
 .footer-terms,
 .footer-social {
@@ -929,11 +1002,10 @@ ul.list li a:hover {
 .footer-heading {
   font-size: 1.2rem;
   margin-bottom: 15px;
-  color: #2dbe60; /* Accent color */
+  color: #2dbe60;
   font-weight: bold;
 }
 
-/* Link Styling */
 .footer-list,
 .footer-social-list {
   list-style-type: none;
@@ -953,10 +1025,9 @@ ul.list li a:hover {
 }
 
 .footer-link:hover {
-  color: #2dbe60; /* Accent color on hover */
+  color: #2dbe60;
 }
 
-/* Social Media Icons */
 .footer-social-link {
   font-size: 1.5rem;
   color: #ccc;
@@ -968,7 +1039,6 @@ ul.list li a:hover {
   color: #2dbe60;
 }
 
-/* Footer Bottom */
 .footer-bottom {
   padding: 20px;
   font-size: 0.9rem;
@@ -979,7 +1049,6 @@ ul.list li a:hover {
   margin: 0;
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
@@ -1001,7 +1070,6 @@ ul.list li a:hover {
   animation: fadeIn 1.5s ease-in-out;
 }
 
-/* backe to top */
 .scroll-to-top-btn {
   position: fixed;
   bottom: 30px;
@@ -1012,17 +1080,15 @@ ul.list li a:hover {
   font-size: 24px;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  display: none; /* Hidden by default */
+  display: none;
   z-index: 100;
-  animation: bounce 2s infinite; /* Bounce animation applied directly */
+  animation: bounce 2s infinite;
 }
 
-/* Show the button when the class "show" is added */
 .scroll-to-top-btn.show {
   display: block;
 }
 
-/* Bouncing animation */
 @keyframes bounce {
   0%,
   100% {

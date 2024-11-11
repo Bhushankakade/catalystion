@@ -1,3 +1,9 @@
+const menuIcon = document.querySelector(".menu-icon");
+const navList = document.querySelector(".list");
+
+menuIcon.addEventListener("click", () => {
+  navList.classList.toggle("open"); // Toggle the 'open' class to trigger the slide effect
+});
 // Counting Animation
 const counters = document.querySelectorAll(".stat-number");
 const speed = 200; // Adjust the speed here
