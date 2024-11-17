@@ -1,0 +1,180 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f8;
+    color: #333333;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.content-box {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: #1a3a72;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.notification {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #666666;
+}
+
+.status-icon {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.status-icon.red {
+    background-color: #ff0000;
+}
+
+/* Project Details */
+.project-details h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #1a3a72;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.detail-item {
+    margin-bottom: 10px;
+}
+
+.match-percentage {
+    font-weight: bold;
+    color: #2dbe60;
+}
+
+/* Skills Tags */
+.skill-tag {
+    display: inline-block;
+    background-color: #a4d6a7;
+    color: #1a3a72;
+    padding: 5px 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Project Description */
+.project-description h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #1a3a72;
+}
+
+.project-description p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Attachments */
+.attachments h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #1a3a72;
+}
+
+.attachments .download-btn {
+    background-color: #5a7dad;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.attachments .download-btn:hover {
+    background-color: #1a3a72;
+}
+
+/* Buttons */
+.primary-btn {
+    background-color: #2dbe60;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.primary-btn:hover {
+    background-color: #1a3a72;
+}
+
+.secondary-btn {
+    background-color: #666666;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.secondary-btn:hover {
+    background-color: #1a3a72;
+}
+
+/* Post Comment */
+.post-comment h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #1a3a72;
+}
+
+.post-comment textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    resize: none;
+}
+
+.post-comment button {
+    width: 100%;
+}

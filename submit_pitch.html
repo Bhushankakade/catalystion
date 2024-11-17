@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Your Case - Catalystion</title>
+    <link rel="stylesheet" href="submit_pitch.css">
+</head>
+
+<body>
+    <!-- Post Pitch Button -->
+    <button onclick="openPitchForm()" class="post-pitch-btn postPitch">Post Pitch</button>
+
+    <!-- Form Modal -->
+    <div id="pitchFormModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closePitchForm()">&times;</span>
+            <h2>Start Your Case</h2>
+
+            <form action="submitPitch.php" method="POST">
+                <div class="form-field">
+                    <label for="industry">Industry:</label>
+                    <input type="text" id="industry" name="industry" value="Dyeing" disabled>
+                </div>
+
+                <div class="form-field">
+                    <label for="segment">Segment:</label>
+                    <input type="text" id="segment" name="segment" value="Textile" disabled>
+                </div>
+
+                <div class="form-field">
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" value="Remote" disabled>
+                </div>
+
+                <div class="form-field">
+                    <label for="budget">Budget:</label>
+                    <input type="text" id="budget" name="budget" value="$1100 (Negotiable)" disabled>
+                </div>
+
+                <div class="form-field">
+                    <label for="duration">Duration:</label>
+                    <input type="text" id="duration" name="duration" value="2 Month" disabled>
+                </div>
+
+                <div class="form-field">
+                    <label for="start-date">Start Date:</label>
+                    <input type="date" id="start-date" name="start-date" value="2024-10-02" disabled>
+                </div>
+
+                <div class="form-field">
+                    <label for="end-date">End Date:</label>
+                    <input type="date" id="end-date" name="end-date" value="2024-12-02" disabled>
+                </div>
+
+                <div class="form-field">
+                    <label for="skills">Skills Required:</label>
+                    <textarea id="skills" name="skills" rows="3"
+                        disabled>Waterless Dyeing, About Disperse Dye</textarea>
+                </div>
+
+                <div class="form-field">
+                    <label for="experience">How Your Past Experience Aligns With the Project? Give Examples:</label>
+                    <textarea id="experience" name="experience" rows="5" required></textarea>
+                </div>
+
+                <!-- Post Pitch and Add Post Checksheet Buttons -->
+                <div class="form-field">
+                    <button type="button" class="post-pitch-btn">Post Pitch</button>
+                    <button type="button" class="post-checksheet-btn">Add Post Checksheet</button>
+                </div>
+
+                <div class="form-field">
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="submit_pitch.js"></script>
+</body>
+
+</html>

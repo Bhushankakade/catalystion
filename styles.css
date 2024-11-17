@@ -77,7 +77,24 @@ ul.list li a:hover {
 
 .login__button:hover {
   background-color: #fff;
+  color: #333;
+}
 
+.apply_as_consultant {
+  border: 0;
+  background: #2dbe60;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin-right: 1.5rem;
+  border: 1px solid #2dbe60;
+  transition: 200ms;
+  cursor: pointer;
+}
+
+.apply_as_consultant:hover {
+  background-color: #fff;
   color: #333;
 }
 

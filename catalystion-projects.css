@@ -1,0 +1,153 @@
+:root {
+  --dark-blue: #1a3a72;
+  --bright-green: #2dbe60;
+  --light-blue: #5a7dad;
+  --soft-green: #a4d6a7;
+  --white: #ffffff;
+  --light-gray: #f4f4f8;
+  --dark-gray: #333333;
+  --medium-gray: #666666;
+  --background-gradient: linear-gradient(135deg, #1a3a72, #5a7dad);
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--background-gradient);
+  color: var(--dark-gray);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark-blue);
+  color: var(--white);
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+header .menu-button {
+  background: var(--bright-green);
+  color: var(--white);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+header .menu-button:hover {
+  background: var(--soft-green);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: var(--white);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  right: 20px;
+  top: 60px;
+  z-index: 1001;
+  width: 200px;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: var(--dark-gray);
+  font-weight: bold;
+}
+
+.dropdown-menu a:hover {
+  background: var(--light-blue);
+  color: var(--white);
+}
+
+.menu-button:focus + .dropdown-menu,
+.dropdown-menu:hover {
+  display: block;
+}
+
+main {
+  padding: 20px;
+}
+
+.section-title {
+  color: var(--white);
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-card .header {
+  background: var(--dark-blue);
+  color: var(--white);
+  padding: 10px 15px;
+  font-size: 1.2em;
+}
+
+.project-card .details {
+  padding: 15px;
+  color: var(--dark-gray);
+}
+
+.project-card .details p {
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+.project-card .progress-bar {
+  background-color: var(--light-gray);
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 10px 0;
+  height: 8px;
+}
+
+.project-card .progress-bar .progress {
+  height: 100%;
+  background-color: var(--bright-green);
+}
+
+.project-card .footer {
+  padding: 10px 15px;
+  text-align: right;
+}
+
+.project-card button {
+  background: var(--bright-green);
+  color: var(--white);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.project-card button:hover {
+  background: var(--soft-green);
+}

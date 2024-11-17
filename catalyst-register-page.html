@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Registration Dashboard</title>
+    <link rel="stylesheet" href="catalyst-register-page.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <h1>🌟 Catalystion Dashboard</h1>
+            <p>Effortless Company Registration for a Seamless Experience</p>
+        </header>
+
+        <!-- Registration Form -->
+        <section class="registration-form">
+            <h2>📋 Company Registration</h2>
+            <form id="company-registration-form">
+                <!-- Company Information -->
+                <div class="form-group">
+                    <label for="company-email">Company Email ID*</label>
+                    <input type="email" id="company-email" placeholder="Enter your company email" required>
+                </div>
+                <div class="form-group">
+                    <label for="company-name">Company Name*</label>
+                    <input type="text" id="company-name" placeholder="Enter company name" required>
+                </div>
+                <div class="form-group">
+                    <label for="company-segment">Company Segment*</label>
+                    <select id="company-segment" required>
+                        <option value="" disabled selected>Select a segment</option>
+                        <option value="finance">Finance</option>
+                        <option value="technology">Technology</option>
+                        <option value="manufacturing">Manufacturing</option>
+                        <option value="healthcare">Healthcare</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="about-company">About Company Product/Services*</label>
+                    <textarea id="about-company" placeholder="Describe your company" required></textarea>
+                </div>
+
+                <!-- Purpose of Joining -->
+                <div class="form-group">
+                    <label for="purpose-joining">Purpose of Joining Catalystion*</label>
+                    <textarea id="purpose-joining" placeholder="Why are you joining Catalystion?" required></textarea>
+                </div>
+
+                <!-- Contact Information -->
+                <h3>Contact Information</h3>
+                <div class="form-group">
+                    <label for="contact-person-name">Contact Person Name*</label>
+                    <input type="text" id="contact-person-name" placeholder="Enter contact person's name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-email">Contact Email ID*</label>
+                    <input type="email" id="contact-email" placeholder="Enter contact email" required>
+                </div>
+
+                <!-- Company Level -->
+                <h3>Company Level*</h3>
+                <div class="form-group radio-group">
+                    <label><input type="radio" name="company-level" value="Startup" required> Startup</label>
+                    <label><input type="radio" name="company-level" value="Intermediate"> Intermediate</label>
+                    <label><input type="radio" name="company-level" value="Big Firm"> Big Firm</label>
+                </div>
+
+                <!-- Legal Documents -->
+                <div class="form-group">
+                    <label for="legal-documents">Upload Legal Documents*</label>
+                    <input type="file" id="legal-documents" required>
+                </div>
+
+                <!-- Terms and Conditions -->
+                <div class="form-group checkbox-group">
+                    <label>
+                        <input type="checkbox" id="terms" required>
+                        I agree to the <a href="#" target="_blank">Terms and Conditions</a>.
+                    </label>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </section>
+    </div>
+</body>
+
+</html>
