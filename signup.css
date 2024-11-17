@@ -1,0 +1,76 @@
+:root {
+  --dark-blue: #1a3a72;
+  --bright-green: #2dbe60;
+  --light-blue: #5a7dad;
+  --soft-green: #a4d6a7;
+  --white: #ffffff;
+  --light-gray: #f4f4f8;
+  --dark-gray: #333333;
+  --medium-gray: #666666;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 10rem;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+.logo {
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+
+#catalyst {
+  color: #1f3a93;
+  font-size: 1.8rem;
+}
+
+#catalyst span {
+  color: #32cd32;
+  font-weight: 400;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-left: auto;
+  position: relative;
+}
+
+ul.list li a {
+  text-decoration: none;
+  position: relative;
+  color: #444;
+  transition: color 0.3s ease-in-out;
+}
+
+ul.list li a:hover::after {
+  width: 100%;
+}
+
+ul.list li a:hover {
+  color: #32cd32;
+}
+
+/* faq */
+

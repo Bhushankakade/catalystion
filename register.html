@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalystion Hiring Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+    
+    <div class="dashboard-header">
+        <h1>CATALYST HIRING DASHBOARD</h1>
+    </div>
+
+    <!-- Terms and Conditions Section -->
+    <section id="terms-section" class="dashboard-section">
+        <h2>Terms and Condition*</h2>
+        <button class="submit-btn">Submit</button>
+    </section>
+
+    <!-- Walk Through Video Section -->
+    <section id="walkthrough-section" class="dashboard-section">
+        <h2>Walk Through Video</h2>
+        <button class="submit-btn">Submit</button>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="registration-section" class="dashboard-section">
+        <h2>Registration*</h2>
+        <label for="mobile">Mobile*</label>
+        <input type="tel" id="mobile">
+
+        <label for="otp">OTP*</label>
+        <input type="text" id="otp" placeholder="- - - - - - - - -" maxlength="10">
+
+        <label for="email">Email*</label>
+        <input type="email" id="email" placeholder="Enter your email">
+
+        <label for="otp-email">Email OTP*</label>
+        <input type="text" id="otp-email" placeholder="- - - - - - - - -" maxlength="10">
+
+        <label for="refer-code">Refer Code*</label>
+        <input type="text" id="refer-code" placeholder="- - - - - - - - -">
+
+        <label for="refer-friend">Refer Friend*</label>
+        <input type="tel" id="refer-friend">
+
+        <input type="checkbox" id="consent">
+        <label for="consent">I Accept To Receiving Call, Mail, Telegram Message From Team Catalyst.</label>
+
+        <button class="submit-btn">Submit</button>
+    </section>
+
+    <!-- Degree Verification Section -->
+    <section id="education-section" class="dashboard-section">
+        <h2>Degree Verification*</h2>
+        <label for="roll-no">Roll No.*</label>
+        <input type="text" id="roll-no">
+
+        <label for="bachelor-degree">Bachelor Degree*</label>
+        <select id="bachelor-degree">
+            <option value="btech">B.E/B.Tech</option>
+            <option value="bsc">B.Sc</option>
+        </select>
+
+        <label for="college-name">College Name*</label>
+        <input type="text" id="college-name">
+
+        <label for="specialization">Specialization*</label>
+        <input type="text" id="specialization">
+
+        <label for="college-location">Bachelor College Location*</label>
+        <input type="text" id="college-location">
+
+        <label for="upload-degree">Upload College ID/Degree/Marksheet*</label>
+        <input type="file" id="upload-degree">
+
+        <button class="add-btn">+Add Education</button>
+        <button class="next-btn">Next</button>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience-section" class="dashboard-section">
+        <h2>Past Experience*</h2>
+        <label for="company-name">Company Name*</label>
+        <input type="text" id="company-name">
+
+        <label for="designation">Designation*</label>
+        <input type="text" id="designation">
+
+        <label for="title">Title*</label>
+        <input type="text" id="title">
+
+        <label for="description">Description*</label>
+        <textarea id="description"></textarea>
+
+        <button class="add-btn">+Add Experience</button>
+        <button class="next-btn">Next</button>
+    </section>
+
+    <!-- Bank Verification Section -->
+    <section id="bank-section" class="dashboard-section">
+        <h2>Bank Verification*</h2>
+        <label for="bank-account">Bank A/C*</label>
+        <input type="text" id="bank-account">
+
+        <label for="ifsc">IFSC Code*</label>
+        <input type="text" id="ifsc">
+
+
+        <button class="next-btn">Next</button>
+    </section>
+
+    <!-- Preferences Section -->
+    <section id="preference-section" class="dashboard-section">
+        <h2>Choose Your Segment*</h2>
+        <label for="preference-1">Preference 1*</label>
+        <input type="text" id="preference-1">
+
+        <label for="preference-2">Preference 2*</label>
+        <input type="text" id="preference-2">
+
+        <label for="preference-3">Preference 3*</label>
+        <input type="text" id="preference-3">
+
+        <button class="next-btn">Next</button>
+    </section>
+</body>
+
+</html>

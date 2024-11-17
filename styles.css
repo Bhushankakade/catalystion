@@ -91,10 +91,13 @@ ul.list li a:hover {
   background-color: #fff;
   font-size: 1.2rem;
   padding: 8px 16px;
-  color: #333;
   border-radius: 8px;
   cursor: pointer;
   transition: 200ms;
+}
+
+.buttons button a {
+  text-decoration: none;
 }
 
 .apply_to_catalyst:hover {
